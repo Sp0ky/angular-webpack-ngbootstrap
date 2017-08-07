@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // MODULES GABI
+import {DashboardModule } from './model/dashboard/dashboard.module';
 import { EmailModule } from './model/email/email.module';
 import { EditorModule } from './model/editor/editor.module';
 
@@ -26,6 +27,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
+    DashboardModule,
     EmailModule,
     EditorModule
   ],
