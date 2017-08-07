@@ -1,5 +1,41 @@
-<main>
-  <h1>Hello from Angular App with Webpack</h1>
+<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer"
+      aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <a class="navbar-brand" href="#">Accueil</a>
 
-  <img src="../assets/images/angular.png">
-</main>
+    <div class="collapse navbar-collapse" id="navbarsExampleContainer">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="dashboard">Tableau de bord<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Alertes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="person">Tiers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="person">Comptes</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Paramètres</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown02">
+            <a class="dropdown-item" routerLink="formuleCotation">Formules de Cotation</a>
+            <a class="dropdown-item" href="#">Barème de Cotation</a>
+            <a class="dropdown-item" href="#">Modèles d'alerte</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="email">Email</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

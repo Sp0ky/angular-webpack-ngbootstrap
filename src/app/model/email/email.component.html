@@ -1,0 +1,24 @@
+<div class="col-md-12" style="margin:25px auto;border-bottom:solid black;" >
+    <h1 style="text-align:center;">Envoi d'email de suivi</h1>
+</div>
+
+<div class="col-md-12" style="margin:0px auto;">
+    <div class="col-md-8">
+        <label>Objet du message :</label>
+    </div>
+    <div class="col-md-8">
+        <input type="text" [ngModel]="objet" (ngModelChange)="objet = $event" style="width:500px;" [disabled]="editUnactivated">
+    </div>
+    <div class="col-md-8" style="margin-top:25px;">
+        <label style="float:top;">Corps du message :</label>
+    </div>
+    <div class="col-md-8" style="margin-top:25px;">
+        <textarea [ngModel]="corps" (ngModelChange)="corps = $event" rows="10" cols="100" [disabled]="editUnactivated"></textarea>
+    </div>
+    <div class="col-md-8" style="margin:50px auto;">
+        <button type="sendButton" class="btn btn-info" [style.visibility]="editUnactivated ? 'visible' : 'hidden'" (click)="activateEditMode();">Modifier</button>
+        <button type="sendButton" class="btn btn-success" style="margin:0 auto;" [style.visibility]="editUnactivated ? 'hidden' : 'visible'"
+            (click)="desactivateEditMode();">Sauvegarder</button>
+        <button type="sendButton" class="btn btn-primary" [style.visibility]="editUnactivated ? 'visible' : 'hidden'" (click)="sendEmail($event);">Envoyer l'email</button>
+    </div>
+</div>
