@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // MODULES GABI
 import { EmailModule } from './model/email/email.module';
+import { EditorModule } from './model/editor/editor.module';
 
 /** COMPONENTS GABI */
 import { AppComponent } from './app.component';
@@ -25,7 +26,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
-    EmailModule
+    EmailModule,
+    EditorModule
   ],
   exports: [JsonpModule],
   

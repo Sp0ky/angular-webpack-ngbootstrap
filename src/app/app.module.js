@@ -18,6 +18,7 @@ var animations_1 = require("@angular/platform-browser/animations");
 var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 // MODULES GABI
 var email_module_1 = require("./model/email/email.module");
+var editor_module_1 = require("./model/editor/editor.module");
 /** COMPONENTS GABI */
 var app_component_1 = require("./app.component");
 var AppModule = (function () {
@@ -35,7 +36,8 @@ AppModule = __decorate([
             forms_1.FormsModule,
             animations_1.BrowserAnimationsModule,
             ng_bootstrap_1.NgbModule.forRoot(),
-            email_module_1.EmailModule
+            email_module_1.EmailModule,
+            editor_module_1.EditorModule
         ],
         exports: [http_1.JsonpModule],
         declarations: [

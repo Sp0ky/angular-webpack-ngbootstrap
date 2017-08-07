@@ -1,0 +1,27 @@
+<div class="col-md-12" style="margin:25px auto;border-bottom:0.1em solid black;">
+  <h1 style="text-align:center;">Envoi d'email de suivi</h1>
+</div>
+<div class="col-md-12" style="margin:0px auto;">
+  <div class="col-md-8">
+    <label>Objet du message :</label>
+  </div>
+  <div class="col-md-8">
+    <input type="text" [ngModel]="objet" (ngModelChange)="objet = $event" style="width:500px;" [disabled]="editUnactivated">
+  </div>
+  <div class="col-md-8" style="margin-top:25px;">
+    <label style="float:top;">Corps du message :</label>
+  </div>
+  <div class="col-md-8" style="margin-top:25px;">
+    <ckeditor [(ngModel)]="ckeditorContent" [config]="{uiColor: '#a4a4a4'}" (change)="onChange($event)" (ready)="onReady($event)"
+      (focus)="onFocus($event)" (blur)="onBlur($event)" debounce="500">
+    </ckeditor>
+  </div>
+  <div class="col-md-8" style="margin:50px auto;">
+  </div>
+  <div class="col-md-8" style="margin:50px auto;">
+    <button type="sendButton" class="btn btn-info" [style.visibility]="editUnactivated ? 'visible' : 'hidden'" (click)="activateEditMode();">Modifier</button>
+    <button type="sendButton" class="btn btn-success" style="margin:0 auto;" [style.visibility]="editUnactivated ? 'hidden' : 'visible'"
+      (click)="desactivateEditMode();">Sauvegarder</button>
+    <button type="sendButton" class="btn btn-primary" [style.visibility]="editUnactivated ? 'visible' : 'hidden'" (click)="sendEmailHTML($event);">Envoyer l'email</button>
+  </div>
+</div>

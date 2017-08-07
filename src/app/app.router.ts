@@ -7,10 +7,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { EmailComponent } from './model/email/email.component';
+import { EditorComponent } from './model/editor/editor.component';
 
 export const router: Routes = [
         {path: '', redirectTo: '/', pathMatch: 'full'},
-        {path: 'email', component: EmailComponent}
+        {path: 'email', component: EmailComponent},
+        {path: 'editor', component: EditorComponent}
     ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
